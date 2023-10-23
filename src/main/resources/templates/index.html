@@ -3,16 +3,21 @@
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
 -->
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
-    <head th:replace ="../templates.layout/plantilla :: head">
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-
-    </head>
-    <body>
-        <header th:replace = "../templates.layout/plantilla :: header" />
-        <section th:replace = "../templates.categorias/fragmentosCategoria :: botonAgregar" />
-
-    </body>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="../templates.layout/plantilla :: head">
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    
+    <!-- Incluye las bibliotecas de jQuery y Bootstrap desde CDNs -->
+  </head>
+<body>
+    <header th:replace="../templates.layout/plantilla :: header" />
+    
+    <!-- Botón para abrir la ventana modal -->
+    <section th:replace="../templates.categorias/fragmentosCategoria :: botonAgregar"/>
+    
+    <div th:replace="../templates.categorias/fragmentosCategoria :: card"/>
+    
+    
+</body>
 </html>

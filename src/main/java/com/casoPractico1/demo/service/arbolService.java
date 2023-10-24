@@ -2,16 +2,19 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
  */
-package com.casoPractico1.demo.Dao;
+package com.casoPractico1.demo.service;
 
 import com.casoPractico1.demo.domain.Arbol;
-import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.List;
 
 /**
  *
  * @author yorvi
  */
-public interface arbolDao extends JpaRepository<Arbol, Long> {
-}
+public interface arbolService {
     
-
+    public List<Arbol> getArbol();
+    
+   public Arbol getArbol(Arbol arbol);
+   
+}

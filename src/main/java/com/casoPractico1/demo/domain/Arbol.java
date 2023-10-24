@@ -8,29 +8,36 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import java.io.Serializable;
+import lombok.Data;
 
 
-
+@Data
 @Entity
-public class Arbol {
+@Table(name = "arbol")
+public class Arbol implements Serializable{
+    
+     private static final long serialVersionUID = 1L;
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id_arbol;
+    private Long idArbol;
     private String nombre;
     private String flor;
     private int dureza;
     private int años;
     private String lugar;
-    private String ruta_imagen;
+    private String rutaImagen;
 
     public Arbol(){}
 
-    public Arbol(String nombre, String flor, int dureza, int años, String lugar, String ruta_imagen) {
+    public Arbol(String nombre, String flor, int dureza, int años, String lugar, String rutaImagen) {
         this.nombre = nombre;
         this.flor = flor;
         this.dureza = dureza;
         this.años = años;
         this.lugar = lugar;
-        this.ruta_imagen = ruta_imagen;
+        this.rutaImagen = rutaImagen;
     }
 }

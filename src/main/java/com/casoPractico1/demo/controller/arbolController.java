@@ -4,6 +4,7 @@
  */
 package com.casoPractico1.demo.controller;
 
+import com.casoPractico1.demo.Dao.arbolDao;
 import com.casoPractico1.demo.domain.Arbol;
 import com.casoPractico1.demo.service.arbolService;
 import java.util.List;
@@ -18,17 +19,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @author yorvi
  */
 @Controller
-@RequestMapping("/arbol")
+@RequestMapping("/categoria")
 public class arbolController {
     
     @Autowired
     private arbolService ArbolService;
     
-    @GetMapping("/index")
-    public String inicio(Model model) {
-        List<Arbol> listadoArbol = ArbolService.getArbol();
-        model.addAttribute("arbol", listadoArbol);
-        return "index";
+    @GetMapping("/listado")
+    public String listarArboles(Model model) {
+        List<Arbol> arboles = ArbolService.getArbol();
+        model.addAttribute("arboles", arboles);
+        return "/categoria/listado";
     }
     
+   
 }

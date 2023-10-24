@@ -3,18 +3,48 @@
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
 -->
-<html lang="es" <html xmlns="http://www.w3.org/1999/xhtml" 
-      xmlns:th="http://www.thymeleaf.org">
-    <head th:replace="../templates.layout/plantilla :: head">
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+    <head th:replace="/layout/plantilla :: head">
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <header th:replace="../templates.layout/plantilla :: header" />
-        
-        <section th:replace="/categoria/fragmentosArboles :: card"/>
-        
-        
-    </body>
-</html>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                </head>
+                <body>
+                    <header th:replace="/layout/plantilla :: header" />
+
+                    <div class="container">
+    <div class="row">
+        <div th:each="arbol : ${arboles}" class="col-md-4">
+            <div class="card" style="width: 18rem;">
+                <img th:src="${arbol.rutaImagen}" class="card-img-top" alt="Imagen de Árbol">
+                <div class="card-body">
+                    <h5 class="card-title" th:text="${arbol.nombre}">Nombre del Árbol</h5>
+                    <p class="card-text" th:text="${arbol.lugar}">Lugar donde vive el Árbol</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <strong>Flor:</strong> <span th:text="${arbol.flor}">Tipo de Flor</span>
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Dureza:</strong> <span th:text="${arbol.dureza}">Nivel de Dureza</span>
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Años:</strong> <span th:text="${arbol.anios}">Edad del Árbol</span>
+                    </li>
+                </ul>
+                <div class="card-body">
+                    <a href="#" class="card-link">Modificar Árbol</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+                </body>
+                </html>
+
+
+                </body>
+                </html>

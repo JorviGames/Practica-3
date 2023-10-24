@@ -45,7 +45,7 @@
         <dependency>
             <groupId>org.webjars</groupId>
             <artifactId>bootstrap</artifactId>
-            <version>5.3.2</version>
+            <version>5.2.3</version>
         </dependency>
         <dependency>
             <groupId>org.webjars</groupId>
@@ -66,6 +66,18 @@
             <groupId>org.webjars</groupId>
             <artifactId>webjars-locator</artifactId>
             <version>0.46</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>6.0.12</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
+            <version>6.0.12</version>
+            <type>jar</type>
         </dependency>
         <dependency>
             <groupId>com.mysql</groupId>

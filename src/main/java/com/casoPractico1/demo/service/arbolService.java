@@ -17,4 +17,8 @@ public interface arbolService {
     
    public Arbol getArbol(Arbol arbol);
    
+   public void save(Arbol arbol);
+    
+    public void delete(Arbol arbol);
+    
 }
